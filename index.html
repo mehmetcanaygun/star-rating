@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Star Rating</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Main CSS -->
+    <style>
+      .row {
+        background: #eee;
+        padding: 1em;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .row:nth-child(odd) {
+        background: #fff;
+      }
+
+      i {
+        color: #ffbd08;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="form-group">
+        <select
+          class="form-control"
+          id="tv-brands"
+          onchange="selectTV(this.value)"
+        >
+          <option value="" selected disabled hidden>Choose TV</option>
+          <option value="sony">Sony 4k TV</option>
+          <option value="samsung">Samsung 4k TV</option>
+          <option value="vizio">Vizio 4k TV</option>
+          <option value="panasonic">Panasonic 4k TV</option>
+          <option value="phillips">Phillips 4k TV</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <input
+          type="number"
+          step="0.1"
+          class="form-control"
+          id="tv-rating"
+          onfocusout="updateRating(this.value)"
+        />
+      </div>
+
+      <div id="tv-table" class="container">
+        <div class="row font-weight-bold">
+          <div class="col-md-6">4k Televisions</div>
+          <div class="col-md-6">Rating</div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">Sony 4k TV</div>
+          <div class="col-md-6" id="sony-stars">
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">Samsung 4k TV</div>
+          <div class="col-md-6" id="samsung-stars">
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">Vizio 4k TV</div>
+          <div class="col-md-6" id="vizio-stars">
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">Panasonic 4k TV</div>
+          <div class="col-md-6" id="panasonic-stars">
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">Phillips 4k TV</div>
+          <div class="col-md-6" id="phillips-stars">
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
